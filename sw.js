@@ -1,6 +1,6 @@
 // network first, last copy when offline
 const CACHE = 'slotnote-v1';
-const CORE = ['./', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
+const CORE = ["./","play.html","manifest.webmanifest","icon-180.png","icon-192.png","icon-512.png"];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE))); });
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
